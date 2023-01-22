@@ -1,0 +1,8 @@
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.24.0.3. Set the 'ServerName' directive globally to suppress this message
+[Sun Jan 22 03:29:34.816629 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/7.4.33 configured -- resuming normal operations
+[Sun Jan 22 03:29:34.817973 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun Jan 22 03:29:41.693526 2023] [autoindex:error] [pid 17] [client 172.24.0.4:55812] AH01276: Cannot serve directory /home/public_html/seo/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Sun Jan 22 03:36:02.401161 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.25.0.3. Set the 'ServerName' directive globally to suppress this message
+[Sun Jan 22 03:46:40.304697 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/7.4.33 configured -- resuming normal operations
+[Sun Jan 22 03:46:40.305383 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
