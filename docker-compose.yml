@@ -31,10 +31,3 @@ services:
     env_file: ./.env
     depends_on:
       - mysql-mariadb
-  node-js:
-    build: './nodejs'
-    ports:
-      - 3000:3000
-    volumes:
-      - ./node:/usr/src/app
-     

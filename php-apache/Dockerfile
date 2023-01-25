@@ -8,7 +8,7 @@ RUN a2enmod rewrite
 
 # Install php extensions
 RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
-RUN pecl install redis && docker-php-ext-enable redis
+RUN pecl install redis xdebug && docker-php-ext-enable redis xdebug
 
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 COPY ./conf/php-conf.ini $PHP_INI_DIR/conf.d/
