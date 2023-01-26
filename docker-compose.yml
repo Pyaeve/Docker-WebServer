@@ -8,7 +8,10 @@ services:
     build: './mysql'
     ports:
       - 3306:3306
+    expose:
+      - 3306
     env_file: ./.env
+    restart: always
     volumes:
       - ./mysql-data:/var/lib/mysql
   nginx:
@@ -20,6 +23,7 @@ services:
       - 80:80
     depends_on:
       - php-apache
+    restart: always
   php-apache:
     build: './php-apache'
     ports:
@@ -29,5 +33,6 @@ services:
       - ./logs:/var/log/apache2
 
     env_file: ./.env
+    restart: always
     depends_on:
       - mysql-mariadb
