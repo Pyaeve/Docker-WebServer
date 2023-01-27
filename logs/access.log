@@ -956,3 +956,7 @@
 172.22.0.4 - - [27/Jan/2023:09:51:40 +0000] "POST /desafioIDESA/APIRestFul/public/api/login HTTP/1.1" 200 676 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
 172.22.0.4 - - [27/Jan/2023:10:23:23 +0000] "GET /desafioIDESA/APIRestFul/public/api/clientes HTTP/1.1" 401 402 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
 172.22.0.4 - - [27/Jan/2023:10:23:48 +0000] "POST /desafioIDESA/APIRestFul/public/api/login HTTP/1.1" 200 676 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
+172.22.0.3 - - [27/Jan/2023:17:46:51 +0000] "GET / HTTP/1.1" 403 456 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
+172.22.0.3 - - [27/Jan/2023:17:47:06 +0000] "GET /desafioIDESA/DesafioUno.php HTTP/1.1" 200 528 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
+172.22.0.3 - - [27/Jan/2023:17:48:34 +0000] "GET /desafioIDESA/v2/public/api/clientes HTTP/1.1" 404 453 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
+172.22.0.3 - - [27/Jan/2023:17:48:47 +0000] "GET /desafioIDESA/APiRestFul/public/api/clientes HTTP/1.1" 401 381 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
