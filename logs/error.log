@@ -1887,3 +1887,4 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 [Sat Jan 28 22:28:41.918625 2023] [php7:notice] [pid 19] [client 172.24.0.4:33378] PHP Stack trace:
 [Sat Jan 28 22:28:41.918895 2023] [php7:notice] [pid 19] [client 172.24.0.4:33378] PHP   1. {main}() /home/public_html/desafioIDESA/t.php:0
 [Sat Jan 28 22:28:41.919165 2023] [php7:notice] [pid 19] [client 172.24.0.4:33378] PHP   2. curl_close($ch = NULL) /home/public_html/desafioIDESA/t.php:24
+[Sun Jan 29 19:17:53.907596 2023] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
