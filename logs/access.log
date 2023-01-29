@@ -1170,3 +1170,6 @@
 172.24.0.4 - - [28/Jan/2023:23:23:27 +0000] "POST /desafioIDESA/v2/public/api/user/auth HTTP/1.1" 200 676 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
 172.24.0.4 - - [29/Jan/2023:19:04:16 +0000] "GET /desafioIDESA/DesafioUno.php HTTP/1.1" 200 528 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
 172.24.0.4 - - [29/Jan/2023:19:08:03 +0000] "GET /desafioIDESA/d2/DesafioUno.php HTTP/1.1" 200 528 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
+172.26.0.4 - - [29/Jan/2023:19:28:42 +0000] "GET /desafioIDESA/DesafioUno.php HTTP/1.1" 404 453 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
+172.26.0.4 - - [29/Jan/2023:19:28:48 +0000] "GET /desafioIDESA/d2/DesafioUno.php HTTP/1.1" 200 528 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
+172.26.0.4 - - [29/Jan/2023:19:29:14 +0000] "GET /desafioIDESA/d2/s1 HTTP/1.1" 200 186 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
