@@ -1900,3 +1900,4 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.27.0.3. Set the 'ServerName' directive globally to suppress this message
 [Mon Jan 30 04:03:23.033340 2023] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.54 (Debian) PHP/7.4.33 configured -- resuming normal operations
 [Mon Jan 30 04:03:23.034041 2023] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Jan 30 04:53:35.469703 2023] [autoindex:error] [pid 20] [client 172.27.0.1:52124] AH01276: Cannot serve directory /home/public_html/desafioIDESA/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
