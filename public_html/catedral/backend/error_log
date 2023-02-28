@@ -1,0 +1,134 @@
+[11-Nov-2020 10:21:28 America/Asuncion] PHP Fatal error:  Uncaught Error: [] operator not supported for strings in /home/desarrolloppy/public_html/catedral/v3/backend/view__cms.php:54
+Stack trace:
+#0 {main}
+  thrown in /home/desarrolloppy/public_html/catedral/v3/backend/view__cms.php on line 54
+[23-Jul-2021 15:27:29 America/Asuncion] PHP Fatal error:  Cannot declare class Productos, because the name is already in use in /hosting/farmaciacatedral/public_html/_sys/lib/controller/productos.class.php on line 0
+[23-Jul-2021 15:27:32 America/Asuncion] PHP Fatal error:  Cannot declare class Productos, because the name is already in use in /hosting/farmaciacatedral/public_html/_sys/lib/controller/productos.class.php on line 0
+[23-Jul-2021 15:27:33 America/Asuncion] PHP Fatal error:  Cannot declare class Productos, because the name is already in use in /hosting/farmaciacatedral/public_html/_sys/lib/controller/productos.class.php on line 0
+[23-Jul-2021 15:27:35 America/Asuncion] PHP Fatal error:  Cannot declare class Productos, because the name is already in use in /hosting/farmaciacatedral/public_html/_sys/lib/controller/productos.class.php on line 0
+[23-Jul-2021 15:27:37 America/Asuncion] PHP Fatal error:  Cannot declare class Productos, because the name is already in use in /hosting/farmaciacatedral/public_html/_sys/lib/controller/productos.class.php on line 0
+[23-Jul-2021 15:28:01 America/Asuncion] PHP Fatal error:  Cannot declare class Productos, because the name is already in use in /hosting/farmaciacatedral/public_html/_sys/lib/controller/productos.class.php on line 0
+[23-Jul-2021 15:28:01 America/Asuncion] PHP Fatal error:  Cannot declare class Productos, because the name is already in use in /hosting/farmaciacatedral/public_html/_sys/lib/controller/productos.class.php on line 0
+[23-Jul-2021 15:28:02 America/Asuncion] PHP Fatal error:  Cannot declare class Productos, because the name is already in use in /hosting/farmaciacatedral/public_html/_sys/lib/controller/productos.class.php on line 0
+[23-Jul-2021 15:28:03 America/Asuncion] PHP Fatal error:  Cannot declare class Productos, because the name is already in use in /hosting/farmaciacatedral/public_html/_sys/lib/controller/productos.class.php on line 0
+[23-Jul-2021 15:28:03 America/Asuncion] PHP Fatal error:  Cannot declare class Productos, because the name is already in use in /hosting/farmaciacatedral/public_html/_sys/lib/controller/productos.class.php on line 0
+[23-Jul-2021 15:28:17 America/Asuncion] PHP Fatal error:  Cannot declare class Productos, because the name is already in use in /hosting/farmaciacatedral/public_html/_sys/lib/controller/productos.class.php on line 0
+[23-Jul-2021 15:28:18 America/Asuncion] PHP Fatal error:  Cannot declare class Productos, because the name is already in use in /hosting/farmaciacatedral/public_html/_sys/lib/controller/productos.class.php on line 0
+[23-Jul-2021 15:28:19 America/Asuncion] PHP Fatal error:  Cannot declare class Productos, because the name is already in use in /hosting/farmaciacatedral/public_html/_sys/lib/controller/productos.class.php on line 0
+[26-Jul-2021 15:11:11 America/Asuncion] PHP Warning:  include(/hosting/farmaciacatedral/public_html/_sys/lib/view/cms.menu_left.php): failed to open stream: No such file or directory in /hosting/farmaciacatedral/public_html/backend/dashboard__cms.php on line 26
+[26-Jul-2021 15:11:11 America/Asuncion] PHP Warning:  include(): Failed opening '/hosting/farmaciacatedral/public_html/_sys/lib/view/cms.menu_left.php' for inclusion (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /hosting/farmaciacatedral/public_html/backend/dashboard__cms.php on line 26
+[03-Jan-2022 15:43:32 America/Asuncion] PHP Fatal error:  Cannot make non static method Mysql::update() static in class Direcciones in /hosting/farmaciacatedral/public_html/_sys/lib/controller/direcciones.class.php on line 0
+[03-Jan-2022 15:43:38 America/Asuncion] PHP Fatal error:  Cannot make non static method Mysql::update() static in class Direcciones in /hosting/farmaciacatedral/public_html/_sys/lib/controller/direcciones.class.php on line 0
+[03-Jan-2022 15:47:35 America/Asuncion] PHP Fatal error:  Uncaught Error: Class 'Direcciones' not found in /hosting/farmaciacatedral/public_html/_sys/lib/controller/direcciones.form.php:6
+Stack trace:
+#0 /hosting/farmaciacatedral/public_html/_sys/lib/core/class.folder.php(11): require_once()
+#1 /hosting/farmaciacatedral/public_html/_sys/init.php(10): Folder::Load('/hosting/farmac...')
+#2 /hosting/farmaciacatedral/public_html/backend/inc/init.php(2): require_once('/hosting/farmac...')
+#3 /hosting/farmaciacatedral/public_html/backend/index__cms.php(2): require_once('/hosting/farmac...')
+#4 {main}
+  thrown in /hosting/farmaciacatedral/public_html/_sys/lib/controller/direcciones.form.php on line 6
+[03-Jan-2022 15:47:42 America/Asuncion] PHP Fatal error:  Uncaught Error: Class 'Direcciones' not found in /hosting/farmaciacatedral/public_html/_sys/lib/controller/direcciones.form.php:6
+Stack trace:
+#0 /hosting/farmaciacatedral/public_html/_sys/lib/core/class.folder.php(11): require_once()
+#1 /hosting/farmaciacatedral/public_html/_sys/init.php(10): Folder::Load('/hosting/farmac...')
+#2 /hosting/farmaciacatedral/public_html/backend/inc/init.php(2): require_once('/hosting/farmac...')
+#3 /hosting/farmaciacatedral/public_html/backend/index__cms.php(2): require_once('/hosting/farmac...')
+#4 {main}
+  thrown in /hosting/farmaciacatedral/public_html/_sys/lib/controller/direcciones.form.php on line 6
+[03-Jan-2022 15:47:43 America/Asuncion] PHP Fatal error:  Uncaught Error: Class 'Direcciones' not found in /hosting/farmaciacatedral/public_html/_sys/lib/controller/direcciones.form.php:6
+Stack trace:
+#0 /hosting/farmaciacatedral/public_html/_sys/lib/core/class.folder.php(11): require_once()
+#1 /hosting/farmaciacatedral/public_html/_sys/init.php(10): Folder::Load('/hosting/farmac...')
+#2 /hosting/farmaciacatedral/public_html/backend/inc/init.php(2): require_once('/hosting/farmac...')
+#3 /hosting/farmaciacatedral/public_html/backend/index__cms.php(2): require_once('/hosting/farmac...')
+#4 {main}
+  thrown in /hosting/farmaciacatedral/public_html/_sys/lib/controller/direcciones.form.php on line 6
+[03-Jan-2022 15:47:43 America/Asuncion] PHP Fatal error:  Uncaught Error: Class 'Direcciones' not found in /hosting/farmaciacatedral/public_html/_sys/lib/controller/direcciones.form.php:6
+Stack trace:
+#0 /hosting/farmaciacatedral/public_html/_sys/lib/core/class.folder.php(11): require_once()
+#1 /hosting/farmaciacatedral/public_html/_sys/init.php(10): Folder::Load('/hosting/farmac...')
+#2 /hosting/farmaciacatedral/public_html/backend/inc/init.php(2): require_once('/hosting/farmac...')
+#3 /hosting/farmaciacatedral/public_html/backend/index__cms.php(2): require_once('/hosting/farmac...')
+#4 {main}
+  thrown in /hosting/farmaciacatedral/public_html/_sys/lib/controller/direcciones.form.php on line 6
+[03-Jan-2022 15:51:59 America/Asuncion] PHP Fatal error:  Uncaught Error: Class 'Direcciones' not found in /hosting/farmaciacatedral/public_html/_sys/lib/controller/direcciones.form.php:6
+Stack trace:
+#0 /hosting/farmaciacatedral/public_html/_sys/lib/core/class.folder.php(11): require_once()
+#1 /hosting/farmaciacatedral/public_html/_sys/init.php(10): Folder::Load('/hosting/farmac...')
+#2 /hosting/farmaciacatedral/public_html/backend/inc/init.php(2): require_once('/hosting/farmac...')
+#3 /hosting/farmaciacatedral/public_html/backend/index__cms.php(2): require_once('/hosting/farmac...')
+#4 {main}
+  thrown in /hosting/farmaciacatedral/public_html/_sys/lib/controller/direcciones.form.php on line 6
+[03-Jan-2022 17:02:35 America/Asuncion] PHP Fatal error:  Uncaught Error: Class 'Direcciones' not found in /hosting/farmaciacatedral/public_html/_sys/lib/controller/direcciones.form.php:6
+Stack trace:
+#0 /hosting/farmaciacatedral/public_html/_sys/lib/core/class.folder.php(11): require_once()
+#1 /hosting/farmaciacatedral/public_html/_sys/init.php(10): Folder::Load('/hosting/farmac...')
+#2 /hosting/farmaciacatedral/public_html/backend/inc/init.php(2): require_once('/hosting/farmac...')
+#3 /hosting/farmaciacatedral/public_html/backend/index__cms.php(2): require_once('/hosting/farmac...')
+#4 {main}
+  thrown in /hosting/farmaciacatedral/public_html/_sys/lib/controller/direcciones.form.php on line 6
+[03-Jan-2022 17:02:52 America/Asuncion] PHP Fatal error:  Uncaught Error: Class 'Direcciones' not found in /hosting/farmaciacatedral/public_html/_sys/lib/controller/direcciones.form.php:6
+Stack trace:
+#0 /hosting/farmaciacatedral/public_html/_sys/lib/core/class.folder.php(11): require_once()
+#1 /hosting/farmaciacatedral/public_html/_sys/init.php(10): Folder::Load('/hosting/farmac...')
+#2 /hosting/farmaciacatedral/public_html/backend/inc/init.php(2): require_once('/hosting/farmac...')
+#3 /hosting/farmaciacatedral/public_html/backend/index__cms.php(2): require_once('/hosting/farmac...')
+#4 {main}
+  thrown in /hosting/farmaciacatedral/public_html/_sys/lib/controller/direcciones.form.php on line 6
+[03-Jan-2022 17:02:54 America/Asuncion] PHP Fatal error:  Uncaught Error: Class 'Direcciones' not found in /hosting/farmaciacatedral/public_html/_sys/lib/controller/direcciones.form.php:6
+Stack trace:
+#0 /hosting/farmaciacatedral/public_html/_sys/lib/core/class.folder.php(11): require_once()
+#1 /hosting/farmaciacatedral/public_html/_sys/init.php(10): Folder::Load('/hosting/farmac...')
+#2 /hosting/farmaciacatedral/public_html/backend/inc/init.php(2): require_once('/hosting/farmac...')
+#3 /hosting/farmaciacatedral/public_html/backend/index__cms.php(2): require_once('/hosting/farmac...')
+#4 {main}
+  thrown in /hosting/farmaciacatedral/public_html/_sys/lib/controller/direcciones.form.php on line 6
+[03-Jan-2022 17:02:56 America/Asuncion] PHP Fatal error:  Uncaught Error: Class 'Direcciones' not found in /hosting/farmaciacatedral/public_html/_sys/lib/controller/direcciones.form.php:6
+Stack trace:
+#0 /hosting/farmaciacatedral/public_html/_sys/lib/core/class.folder.php(11): require_once()
+#1 /hosting/farmaciacatedral/public_html/_sys/init.php(10): Folder::Load('/hosting/farmac...')
+#2 /hosting/farmaciacatedral/public_html/backend/inc/init.php(2): require_once('/hosting/farmac...')
+#3 /hosting/farmaciacatedral/public_html/backend/index__cms.php(2): require_once('/hosting/farmac...')
+#4 {main}
+  thrown in /hosting/farmaciacatedral/public_html/_sys/lib/controller/direcciones.form.php on line 6
+[03-Jan-2022 17:02:57 America/Asuncion] PHP Fatal error:  Uncaught Error: Class 'Direcciones' not found in /hosting/farmaciacatedral/public_html/_sys/lib/controller/direcciones.form.php:6
+Stack trace:
+#0 /hosting/farmaciacatedral/public_html/_sys/lib/core/class.folder.php(11): require_once()
+#1 /hosting/farmaciacatedral/public_html/_sys/init.php(10): Folder::Load('/hosting/farmac...')
+#2 /hosting/farmaciacatedral/public_html/backend/inc/init.php(2): require_once('/hosting/farmac...')
+#3 /hosting/farmaciacatedral/public_html/backend/index__cms.php(2): require_once('/hosting/farmac...')
+#4 {main}
+  thrown in /hosting/farmaciacatedral/public_html/_sys/lib/controller/direcciones.form.php on line 6
+[03-Jan-2022 17:02:58 America/Asuncion] PHP Fatal error:  Uncaught Error: Class 'Direcciones' not found in /hosting/farmaciacatedral/public_html/_sys/lib/controller/direcciones.form.php:6
+Stack trace:
+#0 /hosting/farmaciacatedral/public_html/_sys/lib/core/class.folder.php(11): require_once()
+#1 /hosting/farmaciacatedral/public_html/_sys/init.php(10): Folder::Load('/hosting/farmac...')
+#2 /hosting/farmaciacatedral/public_html/backend/inc/init.php(2): require_once('/hosting/farmac...')
+#3 /hosting/farmaciacatedral/public_html/backend/index__cms.php(2): require_once('/hosting/farmac...')
+#4 {main}
+  thrown in /hosting/farmaciacatedral/public_html/_sys/lib/controller/direcciones.form.php on line 6
+[03-Jan-2022 17:02:58 America/Asuncion] PHP Fatal error:  Uncaught Error: Class 'Direcciones' not found in /hosting/farmaciacatedral/public_html/_sys/lib/controller/direcciones.form.php:6
+Stack trace:
+#0 /hosting/farmaciacatedral/public_html/_sys/lib/core/class.folder.php(11): require_once()
+#1 /hosting/farmaciacatedral/public_html/_sys/init.php(10): Folder::Load('/hosting/farmac...')
+#2 /hosting/farmaciacatedral/public_html/backend/inc/init.php(2): require_once('/hosting/farmac...')
+#3 /hosting/farmaciacatedral/public_html/backend/index__cms.php(2): require_once('/hosting/farmac...')
+#4 {main}
+  thrown in /hosting/farmaciacatedral/public_html/_sys/lib/controller/direcciones.form.php on line 6
+[03-Jan-2022 17:02:59 America/Asuncion] PHP Fatal error:  Uncaught Error: Class 'Direcciones' not found in /hosting/farmaciacatedral/public_html/_sys/lib/controller/direcciones.form.php:6
+Stack trace:
+#0 /hosting/farmaciacatedral/public_html/_sys/lib/core/class.folder.php(11): require_once()
+#1 /hosting/farmaciacatedral/public_html/_sys/init.php(10): Folder::Load('/hosting/farmac...')
+#2 /hosting/farmaciacatedral/public_html/backend/inc/init.php(2): require_once('/hosting/farmac...')
+#3 /hosting/farmaciacatedral/public_html/backend/index__cms.php(2): require_once('/hosting/farmac...')
+#4 {main}
+  thrown in /hosting/farmaciacatedral/public_html/_sys/lib/controller/direcciones.form.php on line 6
+[03-Jan-2022 17:02:59 America/Asuncion] PHP Fatal error:  Uncaught Error: Class 'Direcciones' not found in /hosting/farmaciacatedral/public_html/_sys/lib/controller/direcciones.form.php:6
+Stack trace:
+#0 /hosting/farmaciacatedral/public_html/_sys/lib/core/class.folder.php(11): require_once()
+#1 /hosting/farmaciacatedral/public_html/_sys/init.php(10): Folder::Load('/hosting/farmac...')
+#2 /hosting/farmaciacatedral/public_html/backend/inc/init.php(2): require_once('/hosting/farmac...')
+#3 /hosting/farmaciacatedral/public_html/backend/index__cms.php(2): require_once('/hosting/farmac...')
+#4 {main}
+  thrown in /hosting/farmaciacatedral/public_html/_sys/lib/controller/direcciones.form.php on line 6
+[07-Feb-2022 16:13:02 America/Asuncion] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection refused in /hosting/farmaciacatedral/public_html/_sys/lib/core/class.mysql.php on line 297

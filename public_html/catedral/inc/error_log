@@ -1,0 +1,29 @@
+[11-Jun-2021 18:30:35 UTC] PHP Fatal error:  Uncaught Error: Class 'Categorias' not found in /hosting/farmaciacatedral/public_html/inc/nav.php:7
+Stack trace:
+#0 {main}
+  thrown in /hosting/farmaciacatedral/public_html/inc/nav.php on line 7
+[11-Jun-2021 18:30:46 UTC] PHP Warning:  Invalid argument supplied for foreach() in /hosting/farmaciacatedral/public_html/inc/menu.php on line 3
+[11-Jun-2021 18:36:12 UTC] PHP Fatal error:  Uncaught Error: Class 'Categorias' not found in /hosting/farmaciacatedral/public_html/inc/nav.php:7
+Stack trace:
+#0 {main}
+  thrown in /hosting/farmaciacatedral/public_html/inc/nav.php on line 7
+[11-Jun-2021 18:40:48 UTC] PHP Fatal error:  Uncaught Error: Class 'Categorias' not found in /hosting/farmaciacatedral/public_html/inc/nav.php:7
+Stack trace:
+#0 {main}
+  thrown in /hosting/farmaciacatedral/public_html/inc/nav.php on line 7
+[11-Jun-2021 18:46:34 UTC] PHP Fatal error:  Uncaught Error: Class 'Categorias' not found in /hosting/farmaciacatedral/public_html/inc/nav.php:7
+Stack trace:
+#0 {main}
+  thrown in /hosting/farmaciacatedral/public_html/inc/nav.php on line 7
+[11-Jun-2021 18:46:35 UTC] PHP Fatal error:  Uncaught Error: Class 'Categorias' not found in /hosting/farmaciacatedral/public_html/inc/nav.php:7
+Stack trace:
+#0 {main}
+  thrown in /hosting/farmaciacatedral/public_html/inc/nav.php on line 7
+[11-Jun-2021 18:51:37 UTC] PHP Fatal error:  Uncaught Error: Class 'Categorias' not found in /hosting/farmaciacatedral/public_html/inc/nav.php:7
+Stack trace:
+#0 {main}
+  thrown in /hosting/farmaciacatedral/public_html/inc/nav.php on line 7
+[14-Sep-2021 14:30:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function param() in /hosting/farmaciacatedral/public_html/inc/header.php:26
+Stack trace:
+#0 {main}
+  thrown in /hosting/farmaciacatedral/public_html/inc/header.php on line 26

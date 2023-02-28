@@ -1,0 +1,365 @@
+<?php
+clearBuffer();
+$modulename	= "Productos";
+$producto_id	= numParam('id');
+$title		= $producto_id > 0 ? "Modificar" : "Nuevo";
+$data		= Productos::select($producto_id);
+
+if(isset($_GET['error'])):
+	$error = array();
+	$_POST = $_GET;
+	foreach($_GET as $gk => $gv):
+		if(strpos($gk,"error_") !== false):
+			$error[str_replace("error_","", $gk)] = $gv;
+		endif;
+	endforeach;
+endif;
+
+if(is_array($data) && count($data) > 0 && empty($_POST)):
+	$_POST = $data[0];
+else:
+	$fields = Productos::getfields();
+	foreach($fields as $k => $v):
+		if(isset($_POST[$k])):
+			$value = empty($_POST[$k]) ? NULL : $_POST[$k];
+		else:
+			$value = NULL;
+		endif;
+		$_POST[$k] = $value;
+	endforeach;
+	$_POST['producto_status'] = $_POST['producto_status'] == NULL ? 1 : $_POST['producto_status'];
+endif;
+$callback	= array(
+	"success"	=> "upload.success.php",
+	"error"		=> "upload.error.php"
+);
+?>
+<style>
+	.ck-editor__editable {
+	    min-height: 400px;
+	}
+	input, select{ width: 100%;  }
+</style>
+<ul class="breadcrumb">
+	<li><a href="" class="glyphicons home" onclick="module('dashboard');return!1;"><i></i> <?php echo sysName;?></a></li>
+	<li class="divider"></li>
+	<li><a href="" onclick="module('productos&page=<?php echo pageNumber();?>');return!1;"><?php echo $modulename;?></a></li>
+	<li class="divider"></li>
+	<li><?php echo $title; ?></li>
+</ul>
+<div class="separator"></div>
+<div class="heading-buttons">
+	<h3 class="glyphicons barcode" style="width:50% !important;"><i></i><a href="" onclick="module('productos&page=<?php echo pageNumber();?>');return!1;"><?php echo htmlspecialchars($modulename);?></a> &gt; <?php echo $title;?></h3>
+	<div class="buttons pull-right">
+		<a href="" class="btn btn-primary btn-icon glyphicons circle_arrow_left" onclick="module('productos&page=<?php echo pageNumber();?>');return!1;"><i></i>Volver</a>
+	</div>
+</div>
+<div class="separator"></div>
+<form class="form-horizontal" style="margin-bottom: 0;" id="productos_form" name="productos_form" method="post" autocomplete="off" action="js/save" target="upload_frame" enctype="multipart/form-data">
+	<div class="well" style="padding-bottom: 20px;margin: 0;overflow-y: scroll;">
+		<h4>Informaci&oacute;n de <?php echo $modulename;?></h4>
+		<?php Message::alert();?>
+		<hr class="separator" />
+		<div class="row-fluid">
+		<div class="span10">
+				<div class="control-group<?php echo isset($error['producto_nombre']) ? " error" : "";?>">
+					<label class="control-label" for="producto_nombre">Titulo</label>
+					<div class="controls">
+						<input class="" id="producto_nombre" name="producto_nombre" value="<?php echo htmlspecialchars($_POST['producto_nombre']);?>" type="text" style="color:#000;" />
+						
+						<?php
+						if(isset($error['producto_nombre'])):
+						?>
+						<p class="error help-block"><span class="label label-important"><?php echo $error['producto_nombre'];?></span></p>
+						<?php
+						endif;
+						?>
+					</div>
+				</div>
+				<div class="control-group<?php echo isset($error['producto_droga']) ? " error" : "";?>">
+					<label class="control-label" for="producto_droga">Droga</label>
+					<div class="controls">
+						<input class="" id="producto_droga" name="producto_droga" value="<?php echo htmlspecialchars($_POST['producto_droga']);?>" type="text" style="color:#000;" />
+						
+						<?php
+						if(isset($error['producto_droga'])):
+						?>
+						<p class="error help-block"><span class="label label-important"><?php echo $error['producto_droga'];?></span></p>
+						<?php
+						endif;
+						?>
+					</div>
+				</div>
+
+				<div class="control-group<?php echo isset($error['categoria_id']) ? " error" : "";?>">
+					<label class="control-label" for="categoria_id">Categoria</label>
+					<div class="controls" id="categories_list">
+						<?php
+
+						if(number($_POST['categoria_id']) == 0):
+							Categorias::combobox($_POST['categoria_id'],"loadsubcategories(this,0);");
+						else:
+							$nodes = Categorias::tree($_POST['categoria_id']);
+							$node_number = 0;
+							echo "Categoria Actual<br>";
+							foreach($nodes as $node):
+
+								$view.= $node['categoria_nombre']." =>";
+
+							endforeach;
+								$view = trim($view,"=>");
+								echo $view."<br>";
+
+								Categorias::combobox($_POST['categoria_id'],"loadsubcategories(this,0);");
+
+						endif;
+						?>
+						<?php
+						if(isset($error['categoria_id'])):
+						?>
+						<p class="error help-block"><span class="label label-important"><?php echo $error['categoria_id'];?></span></p>
+						<?php
+						endif;
+						?>
+					<input type="hidden" name="categoria_id" id="categoria_id" value="<?php echo $_POST['categoria_id'];?>" />
+					<input type="hidden" name="categoria_subs" id="categoria_subs" value="0" />
+					</div>
+				</div>
+
+				<div class="control-group<?php echo isset($error['marca_nombre']) ? " error" : "";?>">
+					<label class="control-label" for="marca_nombre">Marcas</label>
+					<div class="controls">
+						<input class="" id="marca_nombre" name="marca_nombre" value="<?php echo htmlspecialchars($_POST['marca_nombre']);?>" type="text" style="color:#000;" />
+
+
+						
+						<?php
+						if(isset($error['marca_nombre'])):
+						?>
+						<p class="error help-block"><span class="label label-important"><?php echo $error['marca_nombre'];?></span></p>
+						<?php
+						endif;
+						?>
+					</div>
+				</div>
+
+				<div class="control-group<?php echo isset($error['producto_codigo']) ? " error" : "";?>">
+					<label class="control-label" for="producto_codigo">Codigo del Producto</label>
+					<div class="controls">
+						<input class="" id="producto_codigo" name="producto_codigo" value="<?php echo htmlspecialchars($_POST['producto_codigo']);?>" type="text" style="color:#000;" />
+						
+						<?php
+						if(isset($error['producto_codigo'])):
+						?>
+						<p class="error help-block"><span class="label label-important"><?php echo $error['producto_codigo'];?></span></p>
+						<?php
+						endif;
+						?>
+					</div>
+				</div>
+
+				<div class="control-group<?php echo isset($error['producto_precio']) ? " error" : "";?>">
+					<label class="control-label" for="producto_precio">Precio</label>
+					<div class="controls">
+						<input class="" id="producto_precio" name="producto_precio" value="<?php echo number_format( $_POST['producto_precio'],0,"",".") ?>" type="text" style="color:#000;" />
+						
+						<?php
+						if(isset($error['producto_precio'])):
+						?>
+						<p class="error help-block"><span class="label label-important"><?php echo $error['producto_precio'];?></span></p>
+						<?php
+						endif;
+						?>
+					</div>
+				</div>
+				
+				<div class="control-group<?php echo isset($error['producto_precioantes']) ? " error" : "";?>">
+					<label class="control-label" for="producto_precioantes">Precio Antes</label>
+					<div class="controls">
+						<input class="" id="producto_precioantes" name="producto_precioantes" value="<?php echo number_format( $_POST['producto_precioantes'],0,"",".") ?>" type="text" style="color:#000;" />
+						
+						<?php
+						if(isset($error['producto_precioantes'])):
+						?>
+						<p class="error help-block"><span class="label label-important"><?php echo $error['producto_precioantes'];?></span></p>
+						<?php
+						endif;
+						?>
+					</div>
+				</div>
+                				           
+                <!--
+				<div class="control-group<?php //echo isset($error['producto_contenido']) ? " error" : "";?>">
+					<label class="control-label" for="producto_contenido">Contenido</label>
+					<div class="controls">
+						<textarea class="" id="producto_contenido" name="producto_contenido" style="color:#000; width:100%; height:360px;">
+							<?php //echo htmlspecialchars($_POST['producto_contenido']);?></textarea>
+						
+						<?php
+						/*if(isset($error['producto_contenido'])):
+						?>
+						<p class="error help-block"><span class="label label-important"><?php //echo $error['producto_contenido'];?></span></p>
+						<?php
+						endif;*/
+						?>
+					</div>
+				</div>-->
+
+				<div class="control-group<?php echo isset($error['producto_stock']) ? " error" : "";?>">
+					<label class="control-label" for="producto_stock">Stock</label>
+					<div class="controls">
+						<input class="" id="producto_stock" name="producto_stock" value="<?php echo htmlspecialchars($_POST['producto_stock']);?>" type="text" style="color:#000;" />
+						
+						<?php
+						if(isset($error['producto_stock'])):
+						?>
+						<p class="error help-block"><span class="label label-important"><?php echo $error['producto_stock'];?></span></p>
+						<?php
+						endif;
+						?>
+					</div>
+				</div>
+
+				<div class="control-group<?php echo isset($error['producto_status']) ? " error" : "";?>">
+					<label class="control-label" for="producto_status">Activo</label>
+					<div class="controls">
+						<input class="" id="producto_status" name="producto_status" value="1" type="checkbox"<?php if($_POST['producto_status'] == 1){?> checked="checked"<?php } ?> />
+						
+						<?php
+						if(isset($error['producto_status'])):
+						?>
+						<p class="error help-block"><span class="label label-important"><?php echo $error['producto_status'];?></span></p>
+						<?php
+						endif;
+						?>
+					</div>
+				</div>
+
+				<div class="control-group<?php echo isset($error['producto_destacado']) ? " error" : "";?>">
+					<label class="control-label" for="producto_destacado">Destacado</label>
+					<div class="controls">
+						<input class="" id="producto_destacado" name="producto_destacado" value="1" type="checkbox"<?php if($_POST['producto_destacado'] == 1){?> checked="checked"<?php } ?> />
+						
+						<?php
+						if(isset($error['producto_destacado'])):
+						?>
+						<p class="error help-block"><span class="label label-important"><?php echo $error['producto_destacado'];?></span></p>
+						<?php
+						endif;
+						?>
+					</div>
+				</div>
+				
+				
+				<div class="control-group<?php echo isset($error['producto_recomendado']) ? " error" : "";?>">
+					<label class="control-label" for="producto_recomendado">Recomendado</label>
+					<div class="controls">
+						<input class="" id="producto_recomendado" name="producto_recomendado" value="1" type="checkbox"<?php if($_POST['producto_recomendado'] == 1){?> checked="checked"<?php } ?> />
+						
+						<?php
+						if(isset($error['producto_recomendado'])):
+						?>
+						<p class="error help-block"><span class="label label-important"><?php echo $error['producto_recomendado'];?></span></p>
+						<?php
+						endif;
+						?>
+					</div>
+				</div>
+
+				<div class="control-group<?php echo isset($error['producto_nivel']) ? " error" : "";?>">
+					<label class="control-label" for="producto_nivel">Bajo Receta</label>
+					<div class="controls">
+						<input class="" id="producto_nivel" name="producto_nivel" value="1" type="checkbox"<?php if(trim($_POST['producto_nivel']) <> trim("VENTA LIBRE") ){?> checked="checked"<?php } ?> />
+						
+						<?php
+						
+						if(isset($error['producto_nivel'])):
+						?>
+						<p class="error help-block"><span class="label label-important"><?php echo $error['producto_nivel'];?></span></p>
+						<?php
+						endif;
+						?>
+					</div>
+				</div>
+
+				<div class="control-group<?php echo isset($error['producto_mejores']) ? " error" : "";?>">
+					<label class="control-label" for="producto_mejores">Mejores</label>
+					<div class="controls">
+						<input class="" id="producto_mejores" name="producto_mejores" value="1" type="checkbox"<?php if(trim($_POST['producto_mejores']) == 1 ){?> checked="checked"<?php } ?> />
+						
+						<?php
+						
+						if(isset($error['producto_mejores'])):
+						?>
+						<p class="error help-block"><span class="label label-important"><?php echo $error['producto_mejores'];?></span></p>
+						<?php
+						endif;
+						?>
+					</div>
+				</div>
+
+				<div class="control-group<?php echo isset($error['producto_descripcion']) ? " error" : "";?>" style="display:none;">
+					<label class="control-label" for="producto_descripcion">Contenido</label>
+					<div class="controls">
+						<textarea class="" id="producto_descripcion" name="producto_descripcion" style="color:#000; width:500px; height:auto;"><?php echo htmlspecialchars($_POST['producto_descripcion']);?></textarea>
+						
+						<?php
+						
+						if(isset($error['producto_descripcion'])):
+						?>
+						<p class="error help-block"><span class="label label-important"><?php echo $error['producto_descripcion'];?></span></p>
+						<?php
+						endif;
+						?>
+					</div>
+				</div>
+
+
+						</div>
+				</div>
+		<hr class="separator" />
+		<div class="form-actions">
+			<input type="hidden" name="id" value="<?php echo $producto_id;?>" />
+			<input type="hidden" name="page" value="<?php echo pageNumber();?>" />
+			<input type="hidden" name="token" value="<?php echo token("Productos::save(".$producto_id.")");?>" />
+			<input type="hidden" name="option" value="productos" id="option" />
+			<input type="hidden" name="callback" value="<?php echo token(json_encode($callback));?>" />
+			<button type="submit" class="btn btn-icon btn-primary glyphicons circle_ok" id="btn_aceptar"><i></i>Aceptar</button>
+			<button type="button" class="btn btn-icon btn-default glyphicons circle_remove" onclick="module('productos&page=<?php echo pageNumber();?>');return!1;"><i></i>Cancelar</button>
+		</div>
+	</div>
+</form>
+<iframe name="upload_frame" id="upload_frame" style="border:none;width:10px; height:10px;"></iframe>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('#btn_aceptar').click(function(){
+			//$('#producto_contenido').val(editor.getData());
+			$('#producto_descripcion').val(editor.getData());
+		});
+	  
+	});
+	var editor = CKEDITOR.replace( 'producto_descripcion' );
+	CKEDITOR.config.height = '300px';
+	function loadsubcategories(e,sub){
+		console.log('id: '+id+' sub:'+sub);
+		var id = e.options[e.selectedIndex].value;
+		$.ajax({
+		  type: "POST",
+		  url: 'js/categorias',
+		  data: {"categoria_id":id,"sub":sub},
+		  error: function(){
+			alert('Error al ingresar al m��dulo.');
+		  },
+		  success: function(res, status, xhr){
+			  var type = xhr.getResponseHeader("Content-type");
+			  if(type != 'application/x-javascript'){
+				//$('#content').html(res);
+				//$('.focus').focus();
+			  }
+		  }
+		}).done(function(){
+			//loaduniforms();
+		});
+	};
+</script>

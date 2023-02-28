@@ -1,0 +1,50 @@
+RewriteEngine On
+#Options -Indexes
+
+RewriteRule ^([a-zA-Z0-9_-]+)$ $1.php [L]
+
+RewriteRule ^informativo/([a-zA-Z0-9_-]+)?$ informativo.php?id=$1 [QSA]
+
+RewriteRule ^productos/([a-zA-Z0-9_-]+)?$ productos.php?id=$1 [QSA]
+RewriteRule ^productos/descuento/([a-zA-Z0-9_-]+)?$ productos.php?d=$1 [QSA]
+
+RewriteRule ^producto/([a-zA-Z0-9_-]+)?$ producto.php?id=$1 [QSA]
+
+RewriteRule ^detalle-pedido/([a-zA-Z0-9_-]+)?$ detalle-pedido.php?id=$1 [QSA]
+
+RewriteRule ^detalle-pedido-historial/([a-zA-Z0-9_-]+)?$ detalle-pedido-historial.php?id=$1 [QSA]
+
+
+RewriteRule ^mi-cuenta/editar?$ registro.php?id=$1 [QSA]
+
+RewriteRule ^pagar/([a-zA-Z0-9_-]+)?$ pagar.php?id=$1 [QSA]
+
+RewriteRule ^direcciones/([a-zA-Z0-9_-]+)?$ direcciones.php?id=$1 [QSA]
+# BEGIN cPanel-generated php ini directives, do not edit
+# Manual editing of this file may result in unexpected behavior.
+# To make changes to this file, use the cPanel MultiPHP INI Editor (Home >> Software >> MultiPHP INI Editor)
+# For more information, read our documentation (https://go.cpanel.net/EA4ModifyINI)
+#l-generated php ini directives, do not edit
+
+##compresion
+<IfModule mod_expires.c>
+          ExpiresActive on
+          ExpiresByType image/jpg "access plus 30 days"
+          ExpiresByType image/png "access plus 30 days"
+          ExpiresByType image/gif "access plus 30 days"
+          ExpiresByType image/jpeg "access plus 30 days"
+          ExpiresByType text/css "access plus 1 days"
+          ExpiresByType image/svg+xml "access plus 30 days"
+          ExpiresByType image/x-icon "access plus 60 days"
+          ExpiresByType application/pdf "access plus 2 days"
+          ExpiresByType text/javascript "access plus 12 hours"
+          ExpiresByType application/x-javascript "access plus 12 hours"
+          ExpiresByType application/javascript "access plus 12 hours"
+</IfModule>
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Configure el paquete “ea-php73” como el lenguaje de programación predeterminado “PHP”.
+#<IfModule mime_module>
+#  AddHandler application/x-httpd-ea-php73 .php .php7 .phtml
+#</IfModule>
+# php -- END cPanel-generated handler, do not edit

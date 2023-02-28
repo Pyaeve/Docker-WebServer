@@ -1,0 +1,49 @@
+
+ @font-face {
+  font-family: 'Casino'
+  src: url('casino.ttf') format('truetype');
+      font-style: normal;
+      font-variant: normal;
+      font-size: 15px;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+}
+
+.ca-dados:before{
+	 font-family: "Casino"; content: "\2a";
+       display: inline-block;
+       font-size: 22px;
+            font-weight: 200;
+
+}
+
+.ca-as:before{
+     font-family: "Casino"; content: "\2a";
+      display: inline-block;
+        display: inline-block;
+       font-size: 22px;
+
+
+}
+     
+
+.ca-ruleta-trebol:before{
+     font-family: "Casino"; content: "\5e";
+      display: inline-block;
+        display: inline-block;
+       font-size: 22px;
+         font-weight: 200;
+
+
+}
+   
+
+.ca-money:before{
+     font-family: "Casino"; content: "\4a";
+        display: inline-block;
+       font-size: 22px;
+       font-weight: 200;
+
+
+}
+   

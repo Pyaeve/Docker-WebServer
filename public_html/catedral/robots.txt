@@ -1,0 +1,20 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+Disallow: /mi-carrito
+Disallow: /ingresar
+Disallow: /registrarse
+Disallow: /pagar
+Disallow: /checkout
+Disallow: /pay
+
+User-agent: *
+Allow: /
+Disallow: /mi-carrito
+Disallow: /ingresar
+Disallow: /registrarse
+Disallow: /pagar
+Disallow: /checkout
+Disallow: /pay
+
+
+Sitemap: https://farmaciacatedral.com.py/sitemap.xml

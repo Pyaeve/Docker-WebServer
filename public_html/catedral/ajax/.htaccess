@@ -1,0 +1,6 @@
+RewriteEngine On
+
+RewriteCond $1 !\.[a-z0-9]+$ [NC]
+RewriteCond %{REQUEST_FILENAME}__ajax.php -f
+RewriteRule ^(.+)$ $1__ajax.php [L]
+RewriteRule ^([a-zA-Z0-9_-]+)$ $1.php [L]

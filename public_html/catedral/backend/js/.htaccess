@@ -1,0 +1,6 @@
+RewriteEngine On
+DirectoryIndex index_js.php
+
+RewriteCond $1 !\.[a-z0-9]+$ [NC]
+RewriteCond %{REQUEST_FILENAME}_js.php -f
+RewriteRule ^(.+)$ $1_js.php [L]

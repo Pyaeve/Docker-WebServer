@@ -1,0 +1,5 @@
+options -MultiViews -Indexes
+RewriteEngine On 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-s
+Rewriterule ^grilla$ grilla.php [L,QSA]

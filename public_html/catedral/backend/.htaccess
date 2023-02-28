@@ -1,0 +1,7 @@
+RewriteEngine On
+DirectoryIndex index__cms.php
+
+RewriteCond $1 !\.[a-z0-9]+$ [NC]
+RewriteCond %{REQUEST_FILENAME}__cms.php -f
+RewriteRule ^(.+)$ $1__cms.php [L] 
+RewriteRule ^dashboard$ index__cms.php

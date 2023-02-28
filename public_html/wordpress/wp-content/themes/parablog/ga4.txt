@@ -1,0 +1,8 @@
+<!-- Fragmento de código de Google Analytics añadido por Site Kit -->
+<script src='https://www.googletagmanager.com/gtag/js?id=G-B1ZL37K692' id='google_gtagjs-js' async></script>
+<script id='google_gtagjs-js-after'>
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "G-B1ZL37K692");
+</script>

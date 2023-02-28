@@ -1,0 +1,14 @@
+@font-face {
+   font-family: 'PT Sans Narrow';
+   font-style: normal;
+   font-display: swap;
+   font-weight: 700;
+   src: url('file:///C:/xampp/htdocs/catedral/fonts/PT Sans Narrow/700.ttf') format('truetype');
+}
+@font-face {
+   font-family: 'PT Sans Narrow';
+   font-style: regular;
+   font-display: swap;
+   font-weight: 400;
+   src: url('file:///C:/xampp/htdocs/catedral/fonts/PT Sans Narrow/regular.ttf') format('truetype');
+}

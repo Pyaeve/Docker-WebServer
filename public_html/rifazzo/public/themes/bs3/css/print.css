@@ -1,0 +1,142 @@
+@font-face {
+  font-family: Libre Barcode;
+  src: url(librebarcode128-regular.ttf);
+}
+@font-face {
+  font-family: Barlow Condensed;
+  src: url(barlowcondensed-regular.otf);
+}
+@font-face {
+  font-family: Barlow Condensed;
+  font-weight: 300;
+  src: url(barlowcondensed-light.otf);
+}
+@font-face {
+  font-family: Barlow Condensed;
+  font-weight: 700;
+  src: url(barlowcondensed-bold.otf);
+}
+
+@page {
+  margin: 0;
+  size: portrait;
+  
+}
+
+html {
+  align-content: top;
+  align-items: top;
+  background: #eef1f5;
+  font-family: Arial;
+  height: 12cm;
+  width:  7cm;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin:  0px;
+  padding: 0px;
+ 
+}
+.row{
+  padding: 0px;
+  margin: 0px;
+}
+.col-sm-12{
+   height: 12cm;
+  width:  7cm;
+  margin:  0px;
+  padding: 0px;
+}
+.col-md-12{
+   height: 12cm;
+  width:  7cm;
+  margin:  0px;
+  padding: 0px;
+  display: block;
+}
+
+body {
+  background: #fff;
+ 
+  color: #2A3239;
+  height: 12cm;
+  margin: 0px;
+  padding: 0px;
+  width: 7cm;
+}
+.container{
+  margin: 0px;
+  padding: 0px;
+  height: 12cm;
+  width: 7cm;
+}
+
+
+
+.content{
+  width: 7cm;
+  height: 12cm;
+  padding: 0px;
+  margin: 0px;}
+.wrapper > div{
+  padding: 0px;
+  height: 12cm;
+  width:  7cm;
+}
+#ticket {
+float: left;
+  align-content: top;
+  align-items: top;
+  background: #fff;
+margin: 0;
+padding: 5px;
+  width: 7cm;
+  height: 12cm;
+ 
+  padding: 0px;
+   font-size: 8pt;
+}
+#ticket h2 {
+  font-weight: 300;
+  margin: 0;
+  text-transform: uppercase;
+}
+#ticket p {
+  font-family: Arial;
+  font-size: 8pt;
+  margin: 0px;
+
+  padding: 0px;
+  
+}
+#ticket dl {
+  margin: 0;
+}
+#ticket li {
+  margin: 0cm;
+}
+
+.card-header{
+  display: none;
+}
+
+.main-footer{
+    display: none;
+}
+
+#ticker .container-fluid{
+  width: 7cm;
+  height: 12cm;
+  padding: 0;
+  margin: 0;
+}
+
+
+.card{
+  width: 7cm;
+  height:  12cm;
+  padding: 0;
+  margin: 0px;
+}
+
+

@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Pedido</title>
+<style type="text/css">
+	body{font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+</style>
+</head>
+<body>
+	<table border="0" width="700" cellpadding="5" cellspacing="5" align="center">
+				<tr>
+					<td colspan="2" align="center">
+						<img src="{$imagen}" alt="Farmacia Catedral" id="logo" data-height-percentage="80" data-actual-width="200" data-actual-height="120">
+					</td>
+				</tr>
+				<tr>
+					<td bgcolor="#004094" style="color:#fff;" colspan="2"><h1>Estimado/a: {$cliente}</h1></td>
+				</tr>
+				<tr>
+					<td colspan="2"><h3>A continuación, te compartimos los detalles del pedido realizado en nuestra tienda online. </h3></td>
+				</tr>
+				<tr>
+					<td><h2>Pedido Nro: {$pedido}</h2></td>
+				</tr>
+				<tr>
+					<td><b>Cliente:</b></td>
+					<td>{$cliente}</td>
+				</tr>
+				<tr>
+					<td><b>Ruc:</b></td>
+					<td>{$ruc}</td>
+				</tr>
+				<tr>
+					<td><b>Tel&eacute;fono:</b></td>
+					<td>{$cliente_telefono}</td>
+				</tr>
+				<tr>
+					<td><b>Direcci&oacute;n de entrega:</b></td>
+					<td>{$cliente_direccion}</td>
+				</tr>
+				<tr>
+					<td><b>Tipo de Pago:</b></td>
+					<td>{$tipopago}</td>
+				</tr>
+			
+				{$local}
+				{$horaentrega}
+				{$deposito}
+				<tr>
+					<td>&nbsp;</td>
+				</tr>		
+
+				<tr>
+					<td><h2>Detalle de la compra</h2></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<table border="0" width="100%" cellpadding="5" cellspacing="0">
+							<tr bgcolor="#262626">
+								<td><b style="color:#ffffff;">Producto</b></td>
+								<td align="center"><b style="color:#ffffff;">C&oacute;digo Interno</b></td>
+								
+								<td align="center"><b style="color:#ffffff;">Precio de venta</b></td>
+
+								<td align="center"><b style="color:#ffffff;">Cantidad</b></td>
+								<td align="right"><b style="color:#ffffff;">Total</b></td>
+							</tr>
+							{$listado}
+						</table>
+					</td>
+				</tr>
+				<tr>
+						<!-- <td>&nbsp;</td> -->
+						<td align="left"><b>Sub Total:</b></td>
+						<td align="right">{$subtotal}</td>
+
+				</tr>
+				<tr>
+						<td align="left"><b>Costo de envio:</b></td>
+						<td align="right">{$costoenvio}</td>
+				</tr>
+
+				<tr>
+						<!-- <td>&nbsp;</td> -->
+						<td colspan="2" bgcolor="#262626" align="right" style="color:#ffffff;">
+							<b style="float: left;">Total:</b>
+							<b style="float: right;">Gs. {$total}</b>
+						</td>
+
+				</tr>
+
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
+			
+				<tr>
+					<td colspan="2">
+						<p style="font-size:11px; color:#8f8f8f; text-align:justify;">
+				          Si tienes alguna duda, reclamo o sugerencia por favor comuníquese con nosotros llamando al 021 627 7000 o escribiéndonos al WhatsApp 0985 689 701 con gusto le seguiremos atendiendo.
+				        </p>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2"><h2>Gracias por confiar en nuestra tienda online</h2></td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
+			</table>
+</body>
+</html>
